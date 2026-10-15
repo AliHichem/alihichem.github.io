@@ -9,7 +9,7 @@ import jsYaml from "js-yaml";
 
 const rawPort = process.env.PORT;
 
-const port = rawPort ? Number(rawPort) : 3000;
+const port = rawPort ? Number(rawPort) : 3001;
 if (rawPort && (Number.isNaN(port) || port <= 0)) {
   throw new Error(`Invalid PORT value: "${rawPort}"`);
 }

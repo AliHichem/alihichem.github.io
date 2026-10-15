@@ -12,18 +12,18 @@
 # ║                                                                      ║
 # ║  Change it to "portfolio" once you have filled in your details.      ║
 # ╚══════════════════════════════════════════════════════════════════════╝
-siteMode: "landing"   # ← CHANGE THIS to "portfolio"
-siteUrl:  "https://yourusername.github.io"  # ← Your GitHub Pages URL (used for RSS & canonical links)
-showPoweredBy: false  # Set to true to show a small "Made with GitVitae" badge in your footer (helps others discover GitVitae)
+siteMode: "portfolio"   # ← CHANGE THIS to "portfolio"
+siteUrl:  "https://alihichem.github.io"  # ← Your GitHub Pages URL (used for RSS & canonical links)
+showPoweredBy: true  # Set to true to show a small "Made with GitVitae" badge in your footer (helps others discover GitVitae)
 
 # ── Identity ───────────────────────────────────────────── (required) ──
-name: "Git Vitae"              # Your name — shown in the header and used as a fallback in the avatar
-title: "Portfolio-Resume Engineer"
-tagline: "I build free portfolios and resumes for everyone."
-email: "git-vitae@proton.me"
-phone: ""                    # Optional — e.g. "+1 (555) 000-1234". Shown in contact section and resume.
-location: "San Francisco, CA"
-avatarUrl: "https://api.dicebear.com/9.x/fun-emoji/svg?seed=Alex&mouth[]=wideSmile&radius=12"  # Demo avatar — replace with your own photo URL (see instructions below)
+name: "Hichem Ali"              # Your name — shown in the header and used as a fallback in the avatar
+title: "Senior Backend & Web3 Engineer"
+tagline: "15+ years architecting serverless cloud platforms, distributed backends, and EVM smart contract systems."
+email: "ali.hichem@mail.com"
+phone: "+21698944391"                    # Optional — e.g. "+1 (555) 000-1234". Shown in contact section and resume.
+location: "Tunisia"
+avatarUrl: "https://github.com/AliHichem.png"  # Demo avatar — replace with your own photo URL (see instructions below)
 # How to add a profile photo (free, no extra account needed):
 #   1. Go to your GitHub repo → click "Add file" → "Upload files"
 #   2. Upload your photo (e.g. avatar.jpg) into a folder called "public/"
@@ -42,25 +42,25 @@ avatarUrl: "https://api.dicebear.com/9.x/fun-emoji/svg?seed=Alex&mouth[]=wideSmi
 #   2. Upload that PDF to Google Drive / Dropbox and copy the direct link
 #   3. Paste the link below and update resumeFileName accordingly
 #
-# resumeUrl: "https://drive.google.com/uc?export=download&id=YOUR_FILE_ID"
-# resumeFileName: "Git_Vitae_Resume.pdf"
+resumeUrl: "https://raw.githubusercontent.com/AliHichem/resume/main/hichemali.pdf"
+resumeFileName: "hichemali_resume.pdf"
 
 # ── Status ─────────────────────────────────────────────────────────────
 openToWork: true         # Shows "Open to Opportunities" banner when true
 
 # ── Theme ──────────────────────────────────────────────────────────────
 defaultTheme: "system"   # Options: light | dark | system
-colorPreset: "indigo"    # Options: indigo | emerald | rose | amber | ocean | slate | custom
+colorPreset: "amber"    # Options: indigo | emerald | rose | amber | ocean | slate | custom
 # primaryColor: "#6366f1" # Optional — pick any colour you like and paste its hex code here.
                            # Overrides colorPreset above. To find a hex code:
                            #   → Google "colour picker", pick a colour, copy the 6-digit code (e.g. #e11d48)
                            #   → or grab one from coolors.co / your favourite site's colour
 
 resumeTheme:
-  twoColumn: "indigo"    # Accent color for the two-column resume layout
+  twoColumn: "amber"    # Accent color for the two-column resume layout
   classic: "emerald"     # Accent color for the classic resume layout
 
-contactFormEndpoint: ""  # Optional — paste a Formspree URL (https://formspree.io/f/xxxx)
+contactFormEndpoint: "ali.hichem@mail.com"  # Optional — paste a Formspree URL (https://formspree.io/f/xxxx)
                            # or any POST endpoint that accepts {name, email, message}.
                            # Leave empty to use a pre-filled mailto: link instead.
 
@@ -81,18 +81,19 @@ sections:
 
 # ── Social links ───────────────────────────── (leave blank to hide) ───
 social:
-  github:   "https://github.com/yourusername"
-  linkedin: "https://linkedin.com/in/yourusername"
+  github:   "https://github.com/alihichem"
+  linkedin: "https://www.linkedin.com/in/alihichem/"
   twitter:  ""
   website:  ""
 
 # ── About ──────────────────────────────────────────────────────────────
 # Use | for multi-line text. Indent each line by 2 spaces.
 about: |
-  I'm a portfolio-resume engineer with 5+ years of experience building products
-  that people love. I specialize in React, Node.js, and distributed systems.
-  When I'm not coding, I'm hiking trails or experimenting with new coffee
-  brewing methods.
+  Senior Backend & Web3 Engineer with 15+ years of experience architecting resilient, high-throughput cloud platforms, event-driven microservices, and EVM smart contract systems. 
+  
+  Proven technical lead skilled in full lifecycle delivery across distributed backend architectures (TypeScript / Node.js, Rust, PHP/Bref), serverless AWS cloud infrastructure, and low-latency Web3 data pipelines. 
+  
+  Focused on clean system design, production safety, and high-velocity AI-assisted engineering workflows.
 
 
 # ── Stats ──────────────────────────────────────────────────────────────
@@ -101,10 +102,10 @@ about: |
 # Optional fields: prefix (e.g. "$") and suffix (e.g. "+" or "k").
 # Remove all entries or set show: false above to hide this section.
 stats:
-  - { label: "Years Experience", value: 5,    suffix: "+" }
+  - { label: "Years Experience", value: 18,    suffix: "+" }
   - { label: "Projects Shipped", value: 20,   suffix: "+" }
   - { label: "Happy Clients",    value: 50,   suffix: "+" }
-  - { label: "Cups of Coffee",   value: 1200, suffix: ""  }
+  - { label: "Cups of Coffee",   value: +infinity, suffix: ""  }
 
 # Examples of other combinations you can use:
 #   - { label: "Active Users",    value: 10000, suffix: "+" }
@@ -114,168 +115,100 @@ stats:
 # ── Languages ──────────────────────────────────────────────────────────
 # level options: Native | Fluent | Conversational | Basic
 languages:
-  - { name: "English",  level: "Native"        }
-  - { name: "Spanish",  level: "Conversational" }
-  - { name: "Mandarin", level: "Basic"          }
+  - { name: "English",  level: "Fluent"        }
+  - { name: "French",  level: "Fluent" }
+  - { name: "Arabic", level: "Native"          }
 
 # ── Skills ─────────────────────────────────────────────────────────────
 skills:
-  - category: "Frontend"
-    items: [React, TypeScript, Next.js, Tailwind CSS, Framer Motion]
-  - category: "Backend"
-    items: [Node.js, Express, PostgreSQL, Redis, GraphQL]
-  - category: "DevOps"
-    items: [Docker, AWS, CI/CD, Kubernetes, Terraform]
-  - category: "Tools"
-    items: [Git, Figma, Jest, Storybook, Datadog]
+  - category: "Languages & Core"
+    items: [Rust, TypeScript, PHP 8+, Solidity]
+  - category: "Backend & Cloud"
+    items: [Node.js, Symfony, AWS, Serverless, Docker, PostgreSQL, MongoDB, Redis, Elasticsearch]
+  - category: "Frontend & Web3"
+    items: [React, Next.js, Vue.js, Wagmi, Viem, Foundry, OpenZeppelin, RxJS]
+  - category: "Tools & DevOps"
+    items: [Linux, Git, GitHub Actions, Testcontainers, REST APIs, WebSockets]
 
-# ── Experience ─────────────────────────────────────────────────────────
+# ── Experience ────────────────────────────────_________________________
 experience:
-  - company: "Acme Corp"
-    role: "Senior Full-Stack Engineer"
-    period: "2022 – Present"
+  - company: "VIWOX"
+    role: "Senior Web2/Web3 Engineer (Sole Proprietorship)"
+    period: "2012 – Present"
     description: |
-      Led migration of monolithic Rails app to microservices.
-      Reduced p99 latency by 60%. Mentored a team of 4 engineers.
+      Architected and deployed production EVM smart contracts, migrated high-traffic legacy monolithic backends to AWS Lambda and Bref, and designed real-time distributed web platforms.
     highlights:
-      - Microservices migration
-      - 60% latency reduction
-      - Team leadership
+      - EVM Smart Contracts (Solidity, Foundry) & dApp Interfaces (Wagmi, Viem)
+      - Serverless Cloud Modernization (AWS Lambda, Bref) cutting costs by 35%
+      - Real-Time Systems & WebSocket Architecture (Mercure, Redis, Node.js)
+      - DevOps Automation & CI/CD Pipelines (Docker, GitHub Actions)
 
-  - company: "Startup XYZ"
-    role: "Software Engineer"
-    period: "2020 – 2022"
+  - company: "Equinoxes (Keyrus group)"
+    role: "PHP Senior Developer"
+    period: "2011 – 2012"
     description: |
-      Built real-time collaboration features for a SaaS platform serving
-      50k users. Owned the entire frontend from scratch.
+      Developed scalable internal architecture tools, automated deployment scripts, and engineered comprehensive unit and functional test suites using PHP, Symfony, and PHPUnit.
     highlights:
-      - Real-time collaboration
-      - 50k users
-      - Frontend ownership
+      - Scalable internal tooling and deployment automation
+      - Comprehensive test suites with PHP, Symfony, and PHPUnit
 
-  - company: "Freelance"
-    role: "Web Developer"
-    period: "2018 – 2020"
+  - company: "Tanitweb"
+    role: "PHP Mid-Senior Developer / Technical Leader"
+    period: "2009 – 2011"
     description: |
-      Delivered 20+ web projects for small businesses and agencies across
-      e-commerce, marketing, and internal tools.
+      Led technical architecture and end-to-end delivery of client web platforms, mentoring junior developers in clean architecture standards.
     highlights:
-      - 20+ projects
-      - E-commerce
-      - Internal tools
+      - Technical architecture and end-to-end delivery
+      - Mentored junior developers in clean architecture standards
 
 # ── Projects ───────────────────────────────────────────────────────────
-# Set featured: true to show in the Featured section (max 3 recommended)
 projects:
-  - name: "OpenDesk"
-    description: "An open-source project management tool built with React and Go. 2.3k GitHub stars. Real-time updates via WebSockets."
-    tags: [React, Go, WebSockets, PostgreSQL]
-    liveUrl: "https://opendesk.example.com"
-    repoUrl: "https://github.com/yourusername/opendesk"
+  - name: "VIWOX Web3 Infrastructure"
+    description: "Production EVM smart contracts (ERC-20, staking, pool management) with real-time off-chain indexing pipelines and responsive dApp interfaces."
+    tags: [Solidity, Foundry, Next.js, Wagmi, Viem]
+    liveUrl: "https://alihichem.github.io"
+    repoUrl: "https://github.com/alihichem"
     featured: true
 
-  - name: "CodeLens"
-    description: "VS Code extension that uses AI to generate inline documentation. 10k+ installs from the marketplace."
-    tags: [TypeScript, OpenAI, "VS Code API"]
+  - name: "Real-time Web & WebSocket Platforms"
+    description: "Distributed RESTful and WebSocket systems utilizing Mercure, Redis, and MongoDB/PostgreSQL to optimize query bottlenecks under high concurrency."
+    tags: [Node.js, PHP, WebSockets, Redis, PostgreSQL]
     liveUrl: ""
-    repoUrl: "https://github.com/yourusername/codelens"
+    repoUrl: "https://github.com/alihichem"
     featured: true
 
-  - name: "PriceWatch"
-    description: "Browser extension that tracks price history on e-commerce sites and alerts users to drops."
-    tags: [JavaScript, "Chrome API", Node.js]
-    liveUrl: "https://pricewatch.example.com"
-    repoUrl: "https://github.com/yourusername/pricewatch"
-    featured: false
-
-  - name: "Logbook"
-    description: "A minimalist journaling app with end-to-end encryption. Built in a weekend. 500+ users."
-    tags: ["React Native", SQLite, Crypto]
+  - name: "Serverless Cloud Migration"
+    description: "Migrated high-traffic legacy monolithic backends to AWS Lambda and Bref, cutting compute infrastructure costs by 35% while ensuring autoscaling reliability."
+    tags: [AWS, Serverless, PHP, Node.js, DevOps]
     liveUrl: ""
-    repoUrl: "https://github.com/yourusername/logbook"
+    repoUrl: ""
     featured: false
 
 # ── Education ──────────────────────────────────────────────────────────
 education:
-  - institution: "University of California, Berkeley"
-    degree: "B.S. Computer Science"
-    period: "2014 – 2018"
+  - institution: "The Higher Institute of Technology (ISET Ariana)"
+    degree: "IT Diploma in Technology T.S.I.C (Software Engineering)"
+    period: "2002 – 2006"
+
+  - institution: "Lycee Abou el kasem chebbi"
+    degree: "Bachelor (Specialization in Technology)"
+    period: "2002"
 
 # ── Certifications ─────────────────────────────────────────────────────
-certifications:
-  - title: "AWS Certified Solutions Architect – Associate"
-    issuer: "Amazon Web Services"
-    date: "2023"
-    credentialUrl: "https://aws.amazon.com/verification"
-    badgeUrl: "https://images.credly.com/size/340x340/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png"
-    tags: [Cloud, Architecture, AWS]
-
-  - title: "Professional Scrum Master I"
-    issuer: "Scrum.org"
-    date: "2022"
-    credentialUrl: "https://www.scrum.org/certificates"
-    badgeUrl: "https://images.credly.com/size/340x340/images/a2790314-008a-4c3d-9e11-2a8f48155adc/image.png"
-    tags: [Agile, Scrum, Leadership]
-
-  - title: "Google Professional Data Engineer"
-    issuer: "Google Cloud"
-    date: "2021"
-    credentialUrl: ""
-    badgeUrl: ""
-    tags: [Data, GCP, BigQuery]
-
+certifications: []
 
 # ── Publications ───────────────────────────────────────────────────────
-# Optional — ideal for researchers, academics, and technical writers.
-# type options: conference | journal | preprint | book-chapter | workshop
 publications:
-  - title: "Scaling Real-Time Collaboration in Distributed Systems"
-    authors: "Rivera A, Chen L, Patel S"
-    venue: "USENIX ATC 2023"
-    year: "2023"
-    url: "https://arxiv.org/abs/example"
-    type: "conference"
-    tags: [distributed-systems, real-time, scalability]
-
-  - title: "Micro-Frontend Architecture Patterns for Large-Scale SPAs"
-    authors: "Rivera A"
-    venue: "IEEE Software"
-    year: "2022"
+  - title: "Real-time Web with WebSockets in Symfony"
+    authors: "Hichem Ali"
+    venue: "Symfony Day Tunisia (City of Science)"
+    year: "2013"
     url: ""
-    type: "journal"
-    tags: [frontend, architecture, micro-frontends]
+    type: "conference"
+    tags: [symfony, websockets, real-time]
 
 # ── Testimonials ───────────────────────────────────────────────────────
-testimonials:
-  - name: "Sarah Chen"
-    title: "Engineering Manager"
-    company: "Acme Corp"
-    relationship: "Manager"   # e.g. Manager | Colleague | Client | Mentor
-    quote: |
-      Alex is one of the most thoughtful engineers I've had the pleasure of
-      working with. They consistently delivered high-quality work on time and
-      elevated the entire team's standards.
-    photoUrl: ""              # URL to headshot — leave empty for initials
-
-  - name: "James Okafor"
-    title: "Senior Product Designer"
-    company: "Startup XYZ"
-    relationship: "Colleague"
-    quote: |
-      Working with Alex was a joy. They have a rare ability to translate vague
-      product requirements into clean, elegant code. Our collaboration made the
-      product significantly better.
-    photoUrl: ""
-
-  - name: "Priya Nair"
-    title: "CTO"
-    company: "FinTech Ventures"
-    relationship: "Client"
-    quote: |
-      Alex delivered the project ahead of schedule and the code quality was
-      exceptional. They communicated proactively, flagged risks early, and were
-      genuinely invested in our success.
-    photoUrl: ""
+testimonials: []
 
 # ── Analytics (optional, always free) ──────────────────────────────────────
 # Two ways to track who visits your portfolio — both free, no credit card:
@@ -305,6 +238,6 @@ testimonials:
 # Then write your post in plain Markdown below the closing ---.
 # See the sample posts in blog/ to get started.
 blog:
-  enabled: true
+  enabled: false
   title: "Blog"
   description: "Thoughts, stories and ideas — everything in one place."
