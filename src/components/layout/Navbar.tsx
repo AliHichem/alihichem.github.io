@@ -1,13 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import {
-  Moon,
-  Sun,
-  Download,
-  Menu,
-  X,
-  Share2,
-  ChevronDown,
-} from 'lucide-react';
+import { Moon, Sun, Menu, X, Share2, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { config } from '@/portfolio.config';
 import { ShareModal } from '@/components/ShareModal';
@@ -316,23 +308,30 @@ export function Navbar({ theme, onToggleTheme, topOffset }: NavbarProps) {
           </button>
 
           {config.resumeUrl ? (
-            <a
-              href={config.resumeUrl}
-              download={config.resumeFileName || 'resume.pdf'}
-              className="bg-primary text-primary-foreground hidden items-center gap-2 rounded-full px-4 py-2 text-xs font-medium tracking-widest uppercase transition-opacity hover:opacity-90 md:flex"
-              data-testid="button-download-resume-nav"
-            >
-              <Download size={13} />
-              Resume (pdf)
-            </a>
+            <>
+              <a
+                href="#/resume"
+                className="border-border text-foreground hover:bg-secondary hidden items-center rounded-full border px-4 py-2 text-xs font-medium tracking-widest uppercase transition-colors lg:flex"
+                data-testid="button-view-resume-nav"
+              >
+                Resume
+              </a>
+              <a
+                href={config.resumeUrl}
+                download={config.resumeFileName || 'hichemali.pdf'}
+                className="bg-primary text-primary-foreground hidden items-center rounded-full px-4 py-2 text-xs font-medium tracking-widest uppercase transition-opacity hover:opacity-90 md:flex"
+                data-testid="button-download-resume-nav"
+              >
+                CV (pdf)
+              </a>
+            </>
           ) : (
             <a
               href="#/resume"
-              className="bg-primary text-primary-foreground hidden items-center gap-2 rounded-full px-4 py-2 text-xs font-medium tracking-widest uppercase transition-opacity hover:opacity-90 md:flex"
-              data-testid="button-download-resume-nav"
+              className="bg-primary text-primary-foreground hidden items-center rounded-full px-4 py-2 text-xs font-medium tracking-widest uppercase transition-opacity hover:opacity-90 md:flex"
+              data-testid="button-view-resume-nav"
             >
-              <Download size={13} />
-              Resume
+              View Resume
             </a>
           )}
 
@@ -416,7 +415,7 @@ export function Navbar({ theme, onToggleTheme, topOffset }: NavbarProps) {
                 href="#/resume"
                 onClick={() => setMobileOpen(false)}
                 className="text-primary hover:bg-accent block rounded-md px-3 py-3 text-xs font-medium tracking-widest uppercase transition-colors"
-                data-testid="button-view-resume-nav"
+                data-testid="button-view-resume-nav-mobile"
               >
                 View Resume
               </a>
@@ -425,7 +424,7 @@ export function Navbar({ theme, onToggleTheme, topOffset }: NavbarProps) {
                   href={config.resumeUrl}
                   download={config.resumeFileName || 'hichemali.pdf'}
                   className="text-primary hover:bg-accent block rounded-md px-3 py-3 text-xs font-medium tracking-widest uppercase transition-colors"
-                  data-testid="button-download-cv-nav"
+                  data-testid="button-download-cv-nav-mobile"
                 >
                   CV (pdf)
                 </a>

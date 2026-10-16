@@ -167,186 +167,186 @@ export function SimpleChat() {
     );
   }
 
-  return (
-    <div
-      className="bg-background flex h-[500px] min-h-0 w-full max-w-md flex-col overflow-hidden overscroll-contain rounded-2xl border shadow-lg"
-      data-lenis-prevent
-    >
-      {/* Header */}
-      <div className="bg-muted/50 flex items-center justify-between gap-3 border-b p-4">
-        <div className="flex items-center gap-3">
-          <Avatar className="h-8 w-8 border">
-            <AvatarFallback className="bg-primary text-primary-foreground">
-              <Bot size={16} />
-            </AvatarFallback>
-          </Avatar>
-          <span className="text-sm font-semibold">AI Assistant</span>
-        </div>
-        <Button
-          variant="ghost"
-          size="icon"
-          className="hover:bg-destructive/20 h-6 w-6"
-          onClick={() => setIsMinimized(true)}
-        >
-          <X size={16} />
-        </Button>
-      </div>
-
-      {/* Loading/Status Area */}
-      {webLLMStatus.status === 'loading' && (
-        <div className="bg-muted/30 border-b p-4">
-          <div className="mb-2 flex items-center gap-3">
-            <Loader2 size={16} className="animate-spin" />
-            <span className="text-sm font-medium">
-              {webLLMStatus.progress === 0
-                ? 'Initializing AI...'
-                : webLLMStatus.progress && webLLMStatus.progress < 100
-                  ? `Loading model: ${webLLMStatus.progress}%`
-                  : 'Finalizing setup...'}
-            </span>
-          </div>
-          {webLLMStatus.progress !== undefined && webLLMStatus.progress > 0 && (
-            <Progress value={webLLMStatus.progress} className="h-2" />
-          )}
-        </div>
-      )}
-
-      {webLLMStatus.status === 'error' && (
-        <div className="bg-destructive/10 border-b p-4">
-          <div className="flex items-start gap-3">
-            <X size={16} className="text-destructive mt-0.5" />
-            <div>
-              <p className="text-destructive text-sm font-medium">
-                AI Unavailable
-              </p>
-              <p className="text-muted-foreground mt-1 text-xs">
-                {webLLMStatus.error}
-              </p>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* Disclaimer */}
-      <div className="border-b border-amber-200 bg-amber-50 px-4 py-2 dark:border-amber-800/30 dark:bg-amber-900/20">
-        <p className="text-xs text-amber-700 dark:text-amber-600">
-          ⚠️ <span className="font-medium">Disclaimer:</span> AI-generated
-          answers may contain errors. Please verify important information
-          independently.
-        </p>
-      </div>
-
-      {/* Message List */}
-      <ScrollArea
-        className="min-h-0 flex-1 overscroll-contain p-4"
-        viewportRef={scrollRef}
-        data-lenis-prevent
-      >
-        <div className="space-y-4">
-          {messages.map((msg, i) => (
-            <div
-              key={i}
-              className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
-            >
-              <div
-                className={`max-w-[80%] rounded-2xl px-4 py-2 text-sm ${msg.role === 'user' ? 'bg-primary text-primary-foreground rounded-tr-none' : 'bg-muted text-muted-foreground rounded-tl-none'}`}
-              >
-                {msg.role === 'user' ? (
-                  msg.content
-                ) : (
-                  <ReactMarkdown
-                    components={{
-                      p: ({ children }) => (
-                        <p className="mb-2 last:mb-0">{children}</p>
-                      ),
-                      ul: ({ children }) => (
-                        <ul className="mb-2 list-inside list-disc">
-                          {children}
-                        </ul>
-                      ),
-                      ol: ({ children }) => (
-                        <ol className="mb-2 list-inside list-decimal">
-                          {children}
-                        </ol>
-                      ),
-                      li: ({ children }) => (
-                        <li className="mb-1">{children}</li>
-                      ),
-                      strong: ({ children }) => (
-                        <strong className="font-semibold">{children}</strong>
-                      ),
-                      em: ({ children }) => (
-                        <em className="italic">{children}</em>
-                      ),
-                      code: ({ children }) => (
-                        <code className="bg-muted/50 rounded px-1 py-0.5 font-mono text-xs">
-                          {children}
-                        </code>
-                      ),
-                    }}
-                  >
-                    {msg.content}
-                  </ReactMarkdown>
-                )}
-              </div>
-            </div>
-          ))}
-          {isLoading && (
-            <div className="flex justify-start">
-              <div className="bg-muted text-muted-foreground max-w-[80%] rounded-2xl rounded-tl-none px-4 py-2 text-sm">
-                <div className="flex items-center gap-2">
-                  <Loader2 size={14} className="animate-spin" />
-                  <span>Thinking...</span>
-                </div>
-              </div>
-            </div>
-          )}
-        </div>
-      </ScrollArea>
-
-      {/* Input Area */}
-      <div className="bg-background border-t p-4">
-        <form
-          className="flex gap-2"
-          onSubmit={(e) => {
-            e.preventDefault();
-            handleSend();
-          }}
-        >
-          <Input
-            placeholder={
-              webLLMStatus.status === 'error'
-                ? 'AI unavailable...'
-                : webLLMStatus.status === 'loading'
-                  ? 'Loading AI model...'
-                  : `Ask about ${config.name}'s experience...`
-            }
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            className="bg-muted rounded-full border-none focus-visible:ring-1"
-            disabled={
-              webLLMStatus.status === 'error' ||
-              webLLMStatus.status === 'loading'
-            }
-          />
-          <Button
-            size="icon"
-            className="shrink-0 rounded-full"
-            disabled={
-              !input.trim() ||
-              isLoading ||
-              webLLMStatus.status === 'error' ||
-              webLLMStatus.status === 'loading'
-            }
-          >
-            {isLoading ? (
-              <Loader2 size={18} className="animate-spin" />
-            ) : (
-              <Send size={18} />
-            )}
-          </Button>
-        </form>
-      </div>
-    </div>
-  );
+  // return (
+  //   <div
+  //     className="bg-background flex h-[500px] min-h-0 w-full max-w-md flex-col overflow-hidden overscroll-contain rounded-2xl border shadow-lg"
+  //     data-lenis-prevent
+  //   >
+  //     {/* Header */}
+  //     <div className="bg-muted/50 flex items-center justify-between gap-3 border-b p-4">
+  //       <div className="flex items-center gap-3">
+  //         <Avatar className="h-8 w-8 border">
+  //           <AvatarFallback className="bg-primary text-primary-foreground">
+  //             <Bot size={16} />
+  //           </AvatarFallback>
+  //         </Avatar>
+  //         <span className="text-sm font-semibold">AI Assistant</span>
+  //       </div>
+  //       <Button
+  //         variant="ghost"
+  //         size="icon"
+  //         className="hover:bg-destructive/20 h-6 w-6"
+  //         onClick={() => setIsMinimized(true)}
+  //       >
+  //         <X size={16} />
+  //       </Button>
+  //     </div>
+  //
+  //     {/* Loading/Status Area */}
+  //     {webLLMStatus.status === 'loading' && (
+  //       <div className="bg-muted/30 border-b p-4">
+  //         <div className="mb-2 flex items-center gap-3">
+  //           <Loader2 size={16} className="animate-spin" />
+  //           <span className="text-sm font-medium">
+  //             {webLLMStatus.progress === 0
+  //               ? 'Initializing AI...'
+  //               : webLLMStatus.progress && webLLMStatus.progress < 100
+  //                 ? `Loading model: ${webLLMStatus.progress}%`
+  //                 : 'Finalizing setup...'}
+  //           </span>
+  //         </div>
+  //         {webLLMStatus.progress !== undefined && webLLMStatus.progress > 0 && (
+  //           <Progress value={webLLMStatus.progress} className="h-2" />
+  //         )}
+  //       </div>
+  //     )}
+  //
+  //     {webLLMStatus.status === 'error' && (
+  //       <div className="bg-destructive/10 border-b p-4">
+  //         <div className="flex items-start gap-3">
+  //           <X size={16} className="text-destructive mt-0.5" />
+  //           <div>
+  //             <p className="text-destructive text-sm font-medium">
+  //               AI Unavailable
+  //             </p>
+  //             <p className="text-muted-foreground mt-1 text-xs">
+  //               {webLLMStatus.error}
+  //             </p>
+  //           </div>
+  //         </div>
+  //       </div>
+  //     )}
+  //
+  //     {/* Disclaimer */}
+  //     <div className="border-b border-amber-200 bg-amber-50 px-4 py-2 dark:border-amber-800/30 dark:bg-amber-900/20">
+  //       <p className="text-xs text-amber-700 dark:text-amber-600">
+  //         ⚠️ <span className="font-medium">Disclaimer:</span> AI-generated
+  //         answers may contain errors. Please verify important information
+  //         independently.
+  //       </p>
+  //     </div>
+  //
+  //     {/* Message List */}
+  //     <ScrollArea
+  //       className="min-h-0 flex-1 overscroll-contain p-4"
+  //       viewportRef={scrollRef}
+  //       data-lenis-prevent
+  //     >
+  //       <div className="space-y-4">
+  //         {messages.map((msg, i) => (
+  //           <div
+  //             key={i}
+  //             className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
+  //           >
+  //             <div
+  //               className={`max-w-[80%] rounded-2xl px-4 py-2 text-sm ${msg.role === 'user' ? 'bg-primary text-primary-foreground rounded-tr-none' : 'bg-muted text-muted-foreground rounded-tl-none'}`}
+  //             >
+  //               {msg.role === 'user' ? (
+  //                 msg.content
+  //               ) : (
+  //                 <ReactMarkdown
+  //                   components={{
+  //                     p: ({ children }) => (
+  //                       <p className="mb-2 last:mb-0">{children}</p>
+  //                     ),
+  //                     ul: ({ children }) => (
+  //                       <ul className="mb-2 list-inside list-disc">
+  //                         {children}
+  //                       </ul>
+  //                     ),
+  //                     ol: ({ children }) => (
+  //                       <ol className="mb-2 list-inside list-decimal">
+  //                         {children}
+  //                       </ol>
+  //                     ),
+  //                     li: ({ children }) => (
+  //                       <li className="mb-1">{children}</li>
+  //                     ),
+  //                     strong: ({ children }) => (
+  //                       <strong className="font-semibold">{children}</strong>
+  //                     ),
+  //                     em: ({ children }) => (
+  //                       <em className="italic">{children}</em>
+  //                     ),
+  //                     code: ({ children }) => (
+  //                       <code className="bg-muted/50 rounded px-1 py-0.5 font-mono text-xs">
+  //                         {children}
+  //                       </code>
+  //                     ),
+  //                   }}
+  //                 >
+  //                   {msg.content}
+  //                 </ReactMarkdown>
+  //               )}
+  //             </div>
+  //           </div>
+  //         ))}
+  //         {isLoading && (
+  //           <div className="flex justify-start">
+  //             <div className="bg-muted text-muted-foreground max-w-[80%] rounded-2xl rounded-tl-none px-4 py-2 text-sm">
+  //               <div className="flex items-center gap-2">
+  //                 <Loader2 size={14} className="animate-spin" />
+  //                 <span>Thinking...</span>
+  //               </div>
+  //             </div>
+  //           </div>
+  //         )}
+  //       </div>
+  //     </ScrollArea>
+  //
+  //     {/* Input Area */}
+  //     <div className="bg-background border-t p-4">
+  //       <form
+  //         className="flex gap-2"
+  //         onSubmit={(e) => {
+  //           e.preventDefault();
+  //           handleSend();
+  //         }}
+  //       >
+  //         <Input
+  //           placeholder={
+  //             webLLMStatus.status === 'error'
+  //               ? 'AI unavailable...'
+  //               : webLLMStatus.status === 'loading'
+  //                 ? 'Loading AI model...'
+  //                 : `Ask about ${config.name}'s experience...`
+  //           }
+  //           value={input}
+  //           onChange={(e) => setInput(e.target.value)}
+  //           className="bg-muted rounded-full border-none focus-visible:ring-1"
+  //           disabled={
+  //             webLLMStatus.status === 'error' ||
+  //             webLLMStatus.status === 'loading'
+  //           }
+  //         />
+  //         <Button
+  //           size="icon"
+  //           className="shrink-0 rounded-full"
+  //           disabled={
+  //             !input.trim() ||
+  //             isLoading ||
+  //             webLLMStatus.status === 'error' ||
+  //             webLLMStatus.status === 'loading'
+  //           }
+  //         >
+  //           {isLoading ? (
+  //             <Loader2 size={18} className="animate-spin" />
+  //           ) : (
+  //             <Send size={18} />
+  //           )}
+  //         </Button>
+  //       </form>
+  //     </div>
+  //   </div>
+  // );
 }

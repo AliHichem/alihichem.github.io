@@ -494,13 +494,13 @@ export function ResumePage({ theme, onToggleTheme }: ResumePageProps) {
             <Share2 size={13} />
             <span className="hidden sm:inline">Share</span>
           </button>
-          <button
-            onClick={() => window.print()}
-            className="bg-primary text-primary-foreground flex items-center gap-1.5 rounded-full px-4 py-2 text-xs font-medium tracking-wide transition-opacity hover:opacity-90"
-          >
-            <Printer size={13} />
-            Save PDF
-          </button>
+          {/* <button */}
+          {/*   onClick={() => window.print()} */}
+          {/*   className="bg-primary text-primary-foreground flex items-center gap-1.5 rounded-full px-4 py-2 text-xs font-medium tracking-wide transition-opacity hover:opacity-90" */}
+          {/* > */}
+          {/*   <Printer size={13} /> */}
+          {/*   Save PDF */}
+          {/* </button> */}
         </div>
       </div>
 

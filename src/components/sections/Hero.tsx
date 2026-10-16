@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Download, MapPin, Phone, ArrowDown } from 'lucide-react';
+import { MapPin, Phone, ArrowDown } from 'lucide-react';
 import { FaGithub, FaLinkedin, FaXTwitter } from 'react-icons/fa6';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { config } from '@/portfolio.config';
@@ -136,7 +136,7 @@ export function Hero() {
 
           <h1 className="text-foreground font-serif text-6xl leading-none font-light tracking-tight md:text-8xl">
             {config.name.split(' ').map((word, i) => (
-              <span key={i} className={i === 1 ? 'italic' : ''}>
+              <span key={i} className={i === 1 ? '' : ''}>
                 {i > 0 ? ' ' : ''}
                 {word}
               </span>
@@ -232,12 +232,21 @@ export function Hero() {
           </a>
           <a
             href="#/resume"
-            className="border-primary/40 text-primary hover:bg-primary/5 flex items-center gap-2 rounded-xl border px-7 py-3 text-sm font-medium tracking-wide transition-all"
+            className="border-primary/40 text-primary hover:bg-primary/5 rounded-xl border px-7 py-3 text-sm font-medium tracking-wide transition-all"
             data-testid="button-view-resume"
           >
-            <Download size={14} />
-            View Resume
+            Resume
           </a>
+          {config.resumeUrl && (
+            <a
+              href={config.resumeUrl}
+              download={config.resumeFileName || 'hichemali.pdf'}
+            className="border-primary/40 text-primary hover:bg-primary/5 rounded-xl border px-7 py-3 text-sm font-medium tracking-wide transition-all"
+              data-testid="button-download-cv"
+            >
+              CV (pdf)
+            </a>
+          )}
         </motion.div>
       </motion.div>
 
