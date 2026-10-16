@@ -108,107 +108,107 @@ export function Contact() {
             </p>
           </motion.div>
 
-          {/* Contact form */}
-          <motion.form
-            onSubmit={handleSubmit}
-            variants={fadeUp}
-            custom={1}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: '-60px' }}
-            className="flex w-full max-w-lg flex-col gap-3 text-left"
-          >
-            <div className="flex flex-col gap-3 sm:flex-row">
-              <div className="flex flex-1 flex-col gap-1.5">
-                <label
-                  htmlFor="contact-name"
-                  className="text-muted-foreground text-xs font-medium tracking-wide"
-                >
-                  Your name
-                </label>
-                <input
-                  id="contact-name"
-                  type="text"
-                  required
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  placeholder="Your Name"
-                  className="border-border bg-background text-foreground placeholder:text-muted-foreground focus:ring-primary/40 focus:border-primary/40 w-full rounded-xl border px-4 py-3 text-sm transition-colors focus:ring-1 focus:outline-none"
-                />
-              </div>
-              <div className="flex flex-1 flex-col gap-1.5">
-                <label
-                  htmlFor="contact-email"
-                  className="text-muted-foreground text-xs font-medium tracking-wide"
-                >
-                  Your email
-                </label>
-                <input
-                  id="contact-email"
-                  type="email"
-                  required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Your email"
-                  className="border-border bg-background text-foreground placeholder:text-muted-foreground focus:ring-primary/40 focus:border-primary/40 w-full rounded-xl border px-4 py-3 text-sm transition-colors focus:ring-1 focus:outline-none"
-                />
-              </div>
-            </div>
-            <div className="flex flex-col gap-1.5">
-              <label
-                htmlFor="contact-message"
-                className="text-muted-foreground text-xs font-medium tracking-wide"
-              >
-                Message
-              </label>
-              <textarea
-                id="contact-message"
-                required
-                rows={5}
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                placeholder="Tell me about your project or opportunity…"
-                className="border-border bg-background text-foreground placeholder:text-muted-foreground focus:ring-primary/40 focus:border-primary/40 w-full resize-none rounded-xl border px-4 py-3 text-sm transition-colors focus:ring-1 focus:outline-none"
-              />
-            </div>
-
-            {status === 'success' && (
-              <div className="flex items-center gap-2 rounded-xl border border-green-500/30 bg-green-500/10 px-4 py-3 text-sm text-green-600 dark:text-green-400">
-                <CheckCircle size={16} className="shrink-0" />
-                Message sent! I&rsquo;ll get back to you soon.
-              </div>
-            )}
-            {status === 'error' && (
-              <div className="flex items-center gap-2 rounded-xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-600 dark:text-red-400">
-                <AlertCircle size={16} className="shrink-0" />
-                Something went wrong — please try emailing directly.
-              </div>
-            )}
-
-            <button
-              type="submit"
-              disabled={status === 'sending'}
-              className="bg-primary text-primary-foreground flex items-center justify-center gap-2 rounded-xl px-6 py-3.5 text-sm font-medium transition-opacity hover:opacity-90 disabled:opacity-50"
-            >
-              <Send size={15} />
-              {status === 'sending'
-                ? 'Sending…'
-                : hasEndpoint
-                  ? 'Send message'
-                  : 'Open in email app'}
-            </button>
-            {!hasEndpoint && (
-              <p className="text-muted-foreground text-center text-xs">
-                Opens your email client with the message pre-filled.{' '}
-                <a
-                  href={`mailto:${config.email}`}
-                  className="text-primary underline-offset-2 hover:underline"
-                >
-                  Or email directly →
-                </a>
-              </p>
-            )}
-          </motion.form>
+          {/* {/* Contact form */} 
+          {/* <motion.form */}
+          {/*   onSubmit={handleSubmit} */}
+          {/*   variants={fadeUp} */}
+          {/*   custom={1} */}
+          {/*   initial="hidden" */}
+          {/*   whileInView="visible" */}
+          {/*   viewport={{ once: true, margin: '-60px' }} */}
+          {/*   className="flex w-full max-w-lg flex-col gap-3 text-left" */}
+          {/* > */}
+          {/*   <div className="flex flex-col gap-3 sm:flex-row"> */}
+          {/*     <div className="flex flex-1 flex-col gap-1.5"> */}
+          {/*       <label */}
+          {/*         htmlFor="contact-name" */}
+          {/*         className="text-muted-foreground text-xs font-medium tracking-wide" */}
+          {/*       > */}
+          {/*         Your name */}
+          {/*       </label> */}
+          {/*       <input */}
+          {/*         id="contact-name" */}
+          {/*         type="text" */}
+          {/*         required */}
+          {/*         value={name} */}
+          {/*         onChange={(e) => setName(e.target.value)} */}
+          {/*         placeholder="Your Name" */}
+          {/*         className="border-border bg-background text-foreground placeholder:text-muted-foreground focus:ring-primary/40 focus:border-primary/40 w-full rounded-xl border px-4 py-3 text-sm transition-colors focus:ring-1 focus:outline-none" */}
+          {/*       /> */}
+          {/*     </div> */}
+          {/*     <div className="flex flex-1 flex-col gap-1.5"> */}
+          {/*       <label */}
+          {/*         htmlFor="contact-email" */}
+          {/*         className="text-muted-foreground text-xs font-medium tracking-wide" */}
+          {/*       > */}
+          {/*         Your email */}
+          {/*       </label> */}
+          {/*       <input */}
+          {/*         id="contact-email" */}
+          {/*         type="email" */}
+          {/*         required */}
+          {/*         value={email} */}
+          {/*         onChange={(e) => setEmail(e.target.value)} */}
+          {/*         placeholder="Your email" */}
+          {/*         className="border-border bg-background text-foreground placeholder:text-muted-foreground focus:ring-primary/40 focus:border-primary/40 w-full rounded-xl border px-4 py-3 text-sm transition-colors focus:ring-1 focus:outline-none" */}
+          {/*       /> */}
+          {/*     </div> */}
+          {/*   </div> */}
+          {/*   <div className="flex flex-col gap-1.5"> */}
+          {/*     <label */}
+          {/*       htmlFor="contact-message" */}
+          {/*       className="text-muted-foreground text-xs font-medium tracking-wide" */}
+          {/*     > */}
+          {/*       Message */}
+          {/*     </label> */}
+          {/*     <textarea */}
+          {/*       id="contact-message" */}
+          {/*       required */}
+          {/*       rows={5} */}
+          {/*       value={message} */}
+          {/*       onChange={(e) => setMessage(e.target.value)} */}
+          {/*       placeholder="Tell me about your project or opportunity…" */}
+          {/*       className="border-border bg-background text-foreground placeholder:text-muted-foreground focus:ring-primary/40 focus:border-primary/40 w-full resize-none rounded-xl border px-4 py-3 text-sm transition-colors focus:ring-1 focus:outline-none" */}
+          {/*     /> */}
+          {/*   </div> */}
+          {/**/}
+          {/*   {status === 'success' && ( */}
+          {/*     <div className="flex items-center gap-2 rounded-xl border border-green-500/30 bg-green-500/10 px-4 py-3 text-sm text-green-600 dark:text-green-400"> */}
+          {/*       <CheckCircle size={16} className="shrink-0" /> */}
+          {/*       Message sent! I&rsquo;ll get back to you soon. */}
+          {/*     </div> */}
+          {/*   )} */}
+          {/*   {status === 'error' && ( */}
+          {/*     <div className="flex items-center gap-2 rounded-xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-600 dark:text-red-400"> */}
+          {/*       <AlertCircle size={16} className="shrink-0" /> */}
+          {/*       Something went wrong — please try emailing directly. */}
+          {/*     </div> */}
+          {/*   )} */}
+          {/**/}
+          {/*   <button */}
+          {/*     type="submit" */}
+          {/*     disabled={status === 'sending'} */}
+          {/*     className="bg-primary text-primary-foreground flex items-center justify-center gap-2 rounded-xl px-6 py-3.5 text-sm font-medium transition-opacity hover:opacity-90 disabled:opacity-50" */}
+          {/*   > */}
+          {/*     <Send size={15} /> */}
+          {/*     {status === 'sending' */}
+          {/*       ? 'Sending…' */}
+          {/*       : hasEndpoint */}
+          {/*         ? 'Send message' */}
+          {/*         : 'Open in email app'} */}
+          {/*   </button> */}
+          {/*   {!hasEndpoint && ( */}
+          {/*     <p className="text-muted-foreground text-center text-xs"> */}
+          {/*       Opens your email client with the message pre-filled.{' '} */}
+          {/*       <a */}
+          {/*         href={`mailto:${config.email}`} */}
+          {/*         className="text-primary underline-offset-2 hover:underline" */}
+          {/*       > */}
+          {/*         Or email directly → */}
+          {/*       </a> */}
+          {/*     </p> */}
+          {/*   )} */}
+          {/* </motion.form> */}
 
           {/* Quick links */}
           <motion.div
