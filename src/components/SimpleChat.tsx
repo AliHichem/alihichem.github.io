@@ -18,7 +18,7 @@ import {
 export function SimpleChat() {
   const MAX_CONVERSATION_PAIRS = 5; // Keep last 5 user/assistant exchanges
   const greetingText = `Hi! I'm ${config.name}'s AI representative. Ask me anything about their experience, skills, or projects!`;
-  
+
   const [messages, setMessages] = React.useState<ChatMessage[]>([
     {
       role: 'assistant',
@@ -62,7 +62,9 @@ export function SimpleChat() {
       let pageText = '';
 
       // Focus on main content areas
-      const mainContent = document.querySelector('main, .page-content, section:not([hidden])');
+      const mainContent = document.querySelector(
+        'main, .page-content, section:not([hidden])'
+      );
       if (mainContent) {
         pageText = mainContent.textContent?.trim() ?? '';
       }
@@ -70,9 +72,7 @@ export function SimpleChat() {
       // Limit to relevant portion
       const trimmedText = pageText.slice(0, 1500);
 
-      setPageContext(
-        `Current View: ${route}\n${trimmedText}`
-      );
+      setPageContext(`Current View: ${route}\n${trimmedText}`);
     };
 
     capturePageContext();
@@ -169,7 +169,7 @@ export function SimpleChat() {
 
   return (
     <div
-      className="bg-background flex h-[500px] min-h-0 w-full max-w-md flex-col overflow-hidden rounded-2xl border shadow-lg overscroll-contain"
+      className="bg-background flex h-[500px] min-h-0 w-full max-w-md flex-col overflow-hidden overscroll-contain rounded-2xl border shadow-lg"
       data-lenis-prevent
     >
       {/* Header */}
@@ -238,7 +238,7 @@ export function SimpleChat() {
 
       {/* Message List */}
       <ScrollArea
-        className="min-h-0 flex-1 p-4 overscroll-contain"
+        className="min-h-0 flex-1 overscroll-contain p-4"
         viewportRef={scrollRef}
         data-lenis-prevent
       >

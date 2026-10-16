@@ -16,19 +16,20 @@ function formatPortfolioContext(cfg: typeof config): string {
   if (cfg.location) md += `- Location: ${cfg.location}\n`;
   if (cfg.email) md += `- Email: ${cfg.email}\n`;
   if (cfg.phone) md += `- Phone: ${cfg.phone}\n`;
-  if (cfg.openToWork !== undefined) md += `- Open to Opportunities: ${cfg.openToWork ? 'Yes' : 'No'}\n`;
-  
+  if (cfg.openToWork !== undefined)
+    md += `- Open to Opportunities: ${cfg.openToWork ? 'Yes' : 'No'}\n`;
+
   if (cfg.about) {
     md += `\nABOUT:\n${cfg.about}\n`;
   }
-  
+
   if (cfg.skills && cfg.skills.length > 0) {
     md += `\nSKILLS:\n`;
     cfg.skills.forEach((s: any) => {
       md += `- ${s.category}: ${Array.isArray(s.items) ? s.items.join(', ') : s.items}\n`;
     });
   }
-  
+
   if (cfg.experience && cfg.experience.length > 0) {
     md += `\nEXPERIENCE:\n`;
     cfg.experience.forEach((e: any) => {
@@ -42,7 +43,7 @@ function formatPortfolioContext(cfg: typeof config): string {
       }
     });
   }
-  
+
   if (cfg.projects && cfg.projects.length > 0) {
     md += `\nPROJECTS:\n`;
     cfg.projects.forEach((p: any) => {
@@ -56,14 +57,14 @@ function formatPortfolioContext(cfg: typeof config): string {
       md += `Featured: ${p.featured ? 'Yes' : 'No'}\n`;
     });
   }
-  
+
   if (cfg.education && cfg.education.length > 0) {
     md += `\nEDUCATION:\n`;
     cfg.education.forEach((edu: any) => {
       md += `- ${edu.degree} from ${edu.institution} (${edu.period || ''})\n`;
     });
   }
-  
+
   if (cfg.certifications && cfg.certifications.length > 0) {
     md += `\nCERTIFICATIONS:\n`;
     cfg.certifications.forEach((c: any) => {
@@ -84,7 +85,7 @@ function formatPortfolioContext(cfg: typeof config): string {
       md += `- "${t.quote.trim()}" — ${t.name}, ${t.title} at ${t.company} (${t.relationship})\n`;
     });
   }
-  
+
   return md;
 }
 

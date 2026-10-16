@@ -1,193 +1,182 @@
 {
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
-    "name": "Git Vitae",
-    "label": "Portfolio-Resume Engineer",
-    "image": "https://api.dicebear.com/9.x/fun-emoji/svg?seed=Alex&mouth[]=wideSmile&radius=12",
-    "email": "git-vitae@proton.me",
-    "phone": "",
-    "summary": "I'm a full-stack engineer with 5+ years of experience building products\nthat people love. I specialize in React, Node.js, and distributed systems.\nWhen I'm not coding, I'm hiking trails or experimenting with new coffee\nbrewing methods.\n",
+    "name": "Hichem Ali",
+    "label": "Senior Backend & Web3 Engineer",
+    "image": "https://github.com/AliHichem.png",
+    "email": "ali.hichem@mail.com",
+    "phone": "+21698944391",
+    "summary": "Senior Backend & Web3 Engineer with 15+ years of experience architecting resilient, high-throughput cloud platforms, event-driven microservices, and EVM smart contract systems. \n\nProven technical lead skilled in full lifecycle delivery across distributed backend architectures (TypeScript / Node.js, Rust, PHP/Bref), serverless AWS cloud infrastructure, and low-latency Web3 data pipelines. \n\nFocused on clean system design, production safety, and high-velocity AI-assisted engineering workflows.\n",
     "location": {
-      "city": "San Francisco",
-      "region": "CA"
+      "city": "Tunisia",
+      "region": ""
     },
     "profiles": [
       {
         "network": "GitHub",
-        "url": "https://github.com/yourusername",
-        "username": "yourusername"
+        "url": "https://github.com/alihichem",
+        "username": "alihichem"
       },
       {
         "network": "LinkedIn",
-        "url": "https://linkedin.com/in/yourusername",
-        "username": "yourusername"
+        "url": "https://www.linkedin.com/in/alihichem/",
+        "username": ""
       }
     ]
   },
   "work": [
     {
-      "name": "Acme Corp",
-      "position": "Senior Full-Stack Engineer",
-      "startDate": "2022",
+      "name": "VIWOX",
+      "position": "Senior Web2/Web3 Engineer (Sole Proprietorship)",
+      "startDate": "2012",
       "endDate": "",
-      "summary": "Led migration of monolithic Rails app to microservices.\nReduced p99 latency by 60%. Mentored a team of 4 engineers.\n",
+      "summary": "Architected and deployed production EVM smart contracts, migrated high-traffic legacy monolithic backends to AWS Lambda and Bref, and designed real-time distributed web platforms.\n",
       "highlights": [
-        "Microservices migration",
-        "60% latency reduction",
-        "Team leadership"
+        "EVM Smart Contracts (Solidity, Foundry) & dApp Interfaces (Wagmi, Viem)",
+        "Serverless Cloud Modernization (AWS Lambda, Bref) cutting costs by 35%",
+        "Real-Time Systems & WebSocket Architecture (Mercure, Redis, Node.js)",
+        "DevOps Automation & CI/CD Pipelines (Docker, GitHub Actions)"
       ]
     },
     {
-      "name": "Startup XYZ",
-      "position": "Software Engineer",
-      "startDate": "2020",
-      "endDate": "2022",
-      "summary": "Built real-time collaboration features for a SaaS platform serving\n50k users. Owned the entire frontend from scratch.\n",
+      "name": "Equinoxes (Keyrus group)",
+      "position": "PHP Senior Developer",
+      "startDate": "2011",
+      "endDate": "2012",
+      "summary": "Developed scalable internal architecture tools, automated deployment scripts, and engineered comprehensive unit and functional test suites using PHP, Symfony, and PHPUnit.\n",
       "highlights": [
-        "Real-time collaboration",
-        "50k users",
-        "Frontend ownership"
+        "Scalable internal tooling and deployment automation",
+        "Comprehensive test suites with PHP, Symfony, and PHPUnit"
       ]
     },
     {
-      "name": "Freelance",
-      "position": "Web Developer",
-      "startDate": "2018",
-      "endDate": "2020",
-      "summary": "Delivered 20+ web projects for small businesses and agencies across\ne-commerce, marketing, and internal tools.\n",
+      "name": "Tanitweb",
+      "position": "PHP Mid-Senior Developer / Technical Leader",
+      "startDate": "2009",
+      "endDate": "2011",
+      "summary": "Led technical architecture and end-to-end delivery of client web platforms, mentoring junior developers in clean architecture standards.\n",
       "highlights": [
-        "20+ projects",
-        "E-commerce",
-        "Internal tools"
+        "Technical architecture and end-to-end delivery",
+        "Mentored junior developers in clean architecture standards"
       ]
     }
   ],
   "education": [
     {
-      "institution": "University of California, Berkeley",
-      "area": "B.S. Computer Science",
+      "institution": "The Higher Institute of Technology (ISET Ariana)",
+      "area": "IT Diploma in Technology T.S.I.C (Software Engineering)",
       "studyType": "",
-      "startDate": "2014",
-      "endDate": "2018"
+      "startDate": "2002",
+      "endDate": "2006"
+    },
+    {
+      "institution": "Lycee Abou el kasem chebbi",
+      "area": "Bachelor (Specialization in Technology)",
+      "studyType": "",
+      "startDate": "2002",
+      "endDate": ""
     }
   ],
   "skills": [
     {
-      "name": "Frontend",
+      "name": "Languages & Core",
       "keywords": [
-        "React",
+        "Rust",
         "TypeScript",
-        "Next.js",
-        "Tailwind CSS",
-        "Framer Motion"
+        "PHP 8+",
+        "Solidity"
       ]
     },
     {
-      "name": "Backend",
+      "name": "Backend & Cloud",
       "keywords": [
         "Node.js",
-        "Express",
-        "PostgreSQL",
-        "Redis",
-        "GraphQL"
-      ]
-    },
-    {
-      "name": "DevOps",
-      "keywords": [
-        "Docker",
+        "Symfony",
         "AWS",
-        "CI/CD",
-        "Kubernetes",
-        "Terraform"
+        "Serverless",
+        "Docker",
+        "PostgreSQL",
+        "MongoDB",
+        "Redis",
+        "Elasticsearch"
       ]
     },
     {
-      "name": "Tools",
+      "name": "Frontend & Web3",
       "keywords": [
+        "React",
+        "Next.js",
+        "Vue.js",
+        "Wagmi",
+        "Viem",
+        "Foundry",
+        "OpenZeppelin",
+        "RxJS"
+      ]
+    },
+    {
+      "name": "Tools & DevOps",
+      "keywords": [
+        "Linux",
         "Git",
-        "Figma",
-        "Jest",
-        "Storybook",
-        "Datadog"
+        "GitHub Actions",
+        "Testcontainers",
+        "REST APIs",
+        "WebSockets"
       ]
     }
   ],
   "projects": [
     {
-      "name": "OpenDesk",
-      "description": "An open-source project management tool built with React and Go. 2.3k GitHub stars. Real-time updates via WebSockets.",
+      "name": "VIWOX Web3 Infrastructure",
+      "description": "Production EVM smart contracts (ERC-20, staking, pool management) with real-time off-chain indexing pipelines and responsive dApp interfaces.",
       "keywords": [
-        "React",
-        "Go",
+        "Solidity",
+        "Foundry",
+        "Next.js",
+        "Wagmi",
+        "Viem"
+      ],
+      "url": "https://alihichem.github.io"
+    },
+    {
+      "name": "Real-time Web & WebSocket Platforms",
+      "description": "Distributed RESTful and WebSocket systems utilizing Mercure, Redis, and MongoDB/PostgreSQL to optimize query bottlenecks under high concurrency.",
+      "keywords": [
+        "Node.js",
+        "PHP",
         "WebSockets",
+        "Redis",
         "PostgreSQL"
       ],
-      "url": "https://opendesk.example.com"
+      "url": "https://github.com/alihichem"
     },
     {
-      "name": "CodeLens",
-      "description": "VS Code extension that uses AI to generate inline documentation. 10k+ installs from the marketplace.",
+      "name": "Serverless Cloud Migration",
+      "description": "Migrated high-traffic legacy monolithic backends to AWS Lambda and Bref, cutting compute infrastructure costs by 35% while ensuring autoscaling reliability.",
       "keywords": [
-        "TypeScript",
-        "OpenAI",
-        "VS Code API"
+        "AWS",
+        "Serverless",
+        "PHP",
+        "Node.js",
+        "DevOps"
       ],
-      "url": "https://github.com/yourusername/codelens"
-    },
-    {
-      "name": "PriceWatch",
-      "description": "Browser extension that tracks price history on e-commerce sites and alerts users to drops.",
-      "keywords": [
-        "JavaScript",
-        "Chrome API",
-        "Node.js"
-      ],
-      "url": "https://pricewatch.example.com"
-    },
-    {
-      "name": "Logbook",
-      "description": "A minimalist journaling app with end-to-end encryption. Built in a weekend. 500+ users.",
-      "keywords": [
-        "React Native",
-        "SQLite",
-        "Crypto"
-      ],
-      "url": "https://github.com/yourusername/logbook"
-    }
-  ],
-  "certificates": [
-    {
-      "name": "AWS Certified Solutions Architect – Associate",
-      "issuer": "Amazon Web Services",
-      "date": "2023",
-      "url": "https://aws.amazon.com/verification"
-    },
-    {
-      "name": "Professional Scrum Master I",
-      "issuer": "Scrum.org",
-      "date": "2022",
-      "url": "https://www.scrum.org/certificates"
-    },
-    {
-      "name": "Google Professional Data Engineer",
-      "issuer": "Google Cloud",
-      "date": "2021",
       "url": ""
     }
   ],
+  "certificates": [],
   "languages": [
     {
       "language": "English",
+      "fluency": "Fluent"
+    },
+    {
+      "language": "French",
+      "fluency": "Fluent"
+    },
+    {
+      "language": "Arabic",
       "fluency": "Native"
-    },
-    {
-      "language": "Spanish",
-      "fluency": "Conversational"
-    },
-    {
-      "language": "Mandarin",
-      "fluency": "Basic"
     }
   ]
 }

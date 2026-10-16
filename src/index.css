@@ -113,9 +113,9 @@ html {
   --chart-4: 340 82% 62%;
   --chart-5: 190 80% 50%;
 
-  --app-font-sans: 'Inter', sans-serif;
-  --app-font-serif: 'Cormorant Garamond', Georgia, serif;
-  --app-font-mono: 'JetBrains Mono', monospace;
+  --app-font-sans: 'Ubuntu', system-ui, -apple-system, sans-serif;
+  --app-font-serif: 'Ubuntu', system-ui, -apple-system, sans-serif;
+  --app-font-mono: 'Mononoki', 'Ubuntu Mono', monospace;
   --radius: 0.625rem;
 
   --shadow-2xs: 0px 1px 2px 0px hsl(222 47% 11% / 0.04);
@@ -567,7 +567,7 @@ html {
 .prose-blog h2,
 .prose-blog h3,
 .prose-blog h4 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Ubuntu', sans-serif;
   font-weight: 500;
   color: hsl(var(--foreground));
   margin-top: 2rem;
@@ -634,7 +634,7 @@ html {
 }
 
 .prose-blog code {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Mononoki', monospace;
   font-size: 0.85em;
   background: hsl(var(--secondary));
   border: 1px solid hsl(var(--border));

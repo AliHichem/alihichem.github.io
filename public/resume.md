@@ -1,92 +1,79 @@
-# Git Vitae
-**Portfolio-Resume Engineer**
+# Hichem Ali
+**Senior Backend & Web3 Engineer**
 
-San Francisco, CA · git-vitae@proton.me · [Github](https://github.com/yourusername) · [Linkedin](https://linkedin.com/in/yourusername)
+Tunisia · +21698944391 · ali.hichem@mail.com · [Github](https://github.com/alihichem) · [Linkedin](https://www.linkedin.com/in/alihichem/)
 
 > **Open to new opportunities**
 
 ## Summary
 
-I'm a full-stack engineer with 5+ years of experience building products
-that people love. I specialize in React, Node.js, and distributed systems.
-When I'm not coding, I'm hiking trails or experimenting with new coffee
-brewing methods.
+Senior Backend & Web3 Engineer with 15+ years of experience architecting resilient, high-throughput cloud platforms, event-driven microservices, and EVM smart contract systems. 
+
+Proven technical lead skilled in full lifecycle delivery across distributed backend architectures (TypeScript / Node.js, Rust, PHP/Bref), serverless AWS cloud infrastructure, and low-latency Web3 data pipelines. 
+
+Focused on clean system design, production safety, and high-velocity AI-assisted engineering workflows.
 
 
 ## Skills
 
-**Frontend:** React, TypeScript, Next.js, Tailwind CSS, Framer Motion
-**Backend:** Node.js, Express, PostgreSQL, Redis, GraphQL
-**DevOps:** Docker, AWS, CI/CD, Kubernetes, Terraform
-**Tools:** Git, Figma, Jest, Storybook, Datadog
+**Languages & Core:** Rust, TypeScript, PHP 8+, Solidity
+**Backend & Cloud:** Node.js, Symfony, AWS, Serverless, Docker, PostgreSQL, MongoDB, Redis, Elasticsearch
+**Frontend & Web3:** React, Next.js, Vue.js, Wagmi, Viem, Foundry, OpenZeppelin, RxJS
+**Tools & DevOps:** Linux, Git, GitHub Actions, Testcontainers, REST APIs, WebSockets
 
 ## Experience
 
-### Senior Full-Stack Engineer — Acme Corp
-_2022 – Present_
+### Senior Web2/Web3 Engineer (Sole Proprietorship) — VIWOX
+_2012 – Present_
 
-Led migration of monolithic Rails app to microservices.
-Reduced p99 latency by 60%. Mentored a team of 4 engineers.
-
-
-- Microservices migration
-- 60% latency reduction
-- Team leadership
-
-### Software Engineer — Startup XYZ
-_2020 – 2022_
-
-Built real-time collaboration features for a SaaS platform serving
-50k users. Owned the entire frontend from scratch.
+Architected and deployed production EVM smart contracts, migrated high-traffic legacy monolithic backends to AWS Lambda and Bref, and designed real-time distributed web platforms.
 
 
-- Real-time collaboration
-- 50k users
-- Frontend ownership
+- EVM Smart Contracts (Solidity, Foundry) & dApp Interfaces (Wagmi, Viem)
+- Serverless Cloud Modernization (AWS Lambda, Bref) cutting costs by 35%
+- Real-Time Systems & WebSocket Architecture (Mercure, Redis, Node.js)
+- DevOps Automation & CI/CD Pipelines (Docker, GitHub Actions)
 
-### Web Developer — Freelance
-_2018 – 2020_
+### PHP Senior Developer — Equinoxes (Keyrus group)
+_2011 – 2012_
 
-Delivered 20+ web projects for small businesses and agencies across
-e-commerce, marketing, and internal tools.
+Developed scalable internal architecture tools, automated deployment scripts, and engineered comprehensive unit and functional test suites using PHP, Symfony, and PHPUnit.
 
 
-- 20+ projects
-- E-commerce
-- Internal tools
+- Scalable internal tooling and deployment automation
+- Comprehensive test suites with PHP, Symfony, and PHPUnit
+
+### PHP Mid-Senior Developer / Technical Leader — Tanitweb
+_2009 – 2011_
+
+Led technical architecture and end-to-end delivery of client web platforms, mentoring junior developers in clean architecture standards.
+
+
+- Technical architecture and end-to-end delivery
+- Mentored junior developers in clean architecture standards
 
 ## Projects
 
-### [OpenDesk](https://opendesk.example.com)
-An open-source project management tool built with React and Go. 2.3k GitHub stars. Real-time updates via WebSockets.
+### [VIWOX Web3 Infrastructure](https://alihichem.github.io)
+Production EVM smart contracts (ERC-20, staking, pool management) with real-time off-chain indexing pipelines and responsive dApp interfaces.
 
-**Tags:** React, Go, WebSockets, PostgreSQL
+**Tags:** Solidity, Foundry, Next.js, Wagmi, Viem
 
-### [CodeLens](https://github.com/yourusername/codelens)
-VS Code extension that uses AI to generate inline documentation. 10k+ installs from the marketplace.
+### [Real-time Web & WebSocket Platforms](https://github.com/alihichem)
+Distributed RESTful and WebSocket systems utilizing Mercure, Redis, and MongoDB/PostgreSQL to optimize query bottlenecks under high concurrency.
 
-**Tags:** TypeScript, OpenAI, VS Code API
+**Tags:** Node.js, PHP, WebSockets, Redis, PostgreSQL
 
-### [PriceWatch](https://pricewatch.example.com)
-Browser extension that tracks price history on e-commerce sites and alerts users to drops.
+### Serverless Cloud Migration
+Migrated high-traffic legacy monolithic backends to AWS Lambda and Bref, cutting compute infrastructure costs by 35% while ensuring autoscaling reliability.
 
-**Tags:** JavaScript, Chrome API, Node.js
-
-### [Logbook](https://github.com/yourusername/logbook)
-A minimalist journaling app with end-to-end encryption. Built in a weekend. 500+ users.
-
-**Tags:** React Native, SQLite, Crypto
+**Tags:** AWS, Serverless, PHP, Node.js, DevOps
 
 ## Education
 
-**B.S. Computer Science** — University of California, Berkeley _(2014 – 2018)_
-
-## Certifications
-
-- **AWS Certified Solutions Architect – Associate** — Amazon Web Services, 2023 ([verify](https://aws.amazon.com/verification))
-- **Professional Scrum Master I** — Scrum.org, 2022 ([verify](https://www.scrum.org/certificates))
-- **Google Professional Data Engineer** — Google Cloud, 2021
+**IT Diploma in Technology T.S.I.C (Software Engineering)** — The Higher Institute of Technology (ISET Ariana) _(2002 – 2006)_
+**Bachelor (Specialization in Technology)** — Lycee Abou el kasem chebbi _(2002)_
 
 ## Languages
 
-English (Native), Spanish (Conversational), Mandarin (Basic)
+English (Fluent), French (Fluent), Arabic (Native)

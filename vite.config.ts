@@ -183,10 +183,9 @@ function metaAndSchemaPlugin() {
 // the CSS, shaving time off the first paint.
 
 const PRELOAD_FONT_PATTERNS = [
-  "inter-latin-400-normal",
-  "inter-latin-500-normal",
-  "cormorant-garamond-latin-300-normal",
-  "cormorant-garamond-latin-300-italic",
+  "ubuntu-latin-400-normal",
+  "ubuntu-latin-500-normal",
+  "mononoki-latin-400-normal",
 ];
 
 function preloadCriticalFontsPlugin(): Plugin {
