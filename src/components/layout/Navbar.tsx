@@ -323,7 +323,7 @@ export function Navbar({ theme, onToggleTheme, topOffset }: NavbarProps) {
               data-testid="button-download-resume-nav"
             >
               <Download size={13} />
-              Resume
+              Resume (pdf)
             </a>
           ) : (
             <a
@@ -412,21 +412,22 @@ export function Navbar({ theme, onToggleTheme, topOffset }: NavbarProps) {
                   Blog
                 </a>
               )}
-              {config.resumeUrl ? (
+              <a
+                href="#/resume"
+                onClick={() => setMobileOpen(false)}
+                className="text-primary hover:bg-accent block rounded-md px-3 py-3 text-xs font-medium tracking-widest uppercase transition-colors"
+                data-testid="button-view-resume-nav"
+              >
+                View Resume
+              </a>
+              {config.resumeUrl && (
                 <a
                   href={config.resumeUrl}
-                  download={config.resumeFileName || 'resume.pdf'}
-                  className="text-primary hover:bg-accent flex items-center gap-2 rounded-md px-3 py-3 text-xs font-medium tracking-widest uppercase transition-colors"
+                  download={config.resumeFileName || 'hichemali.pdf'}
+                  className="text-primary hover:bg-accent block rounded-md px-3 py-3 text-xs font-medium tracking-widest uppercase transition-colors"
+                  data-testid="button-download-cv-nav"
                 >
-                  <Download size={13} /> Download Resume
-                </a>
-              ) : (
-                <a
-                  href="#/resume"
-                  onClick={() => setMobileOpen(false)}
-                  className="text-primary hover:bg-accent flex items-center gap-2 rounded-md px-3 py-3 text-xs font-medium tracking-widest uppercase transition-colors"
-                >
-                  <Download size={13} /> View Resume
+                  CV (pdf)
                 </a>
               )}
             </div>

@@ -105,7 +105,7 @@ stats:
   - { label: "Years Experience", value: 18,    suffix: "+" }
   - { label: "Projects Shipped", value: 20,   suffix: "+" }
   - { label: "Happy Clients",    value: 50,   suffix: "+" }
-  - { label: "Cups of Coffee",   value: +infinity, suffix: ""  }
+  - { label: "Cups of Coffee",   value: +9999, suffix: ""  }
 
 # Examples of other combinations you can use:
 #   - { label: "Active Users",    value: 10000, suffix: "+" }
