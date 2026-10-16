@@ -161,9 +161,9 @@ function App() {
       </Router>
 
       {/* Global Chat Widget - Fixed to bottom right */}
-      {/* <div className="fixed right-4 bottom-4 z-50"> */}
-      {/*   <SimpleChat /> */}
-      {/* </div> */}
+      <div className="fixed right-4 bottom-4 z-50 " >
+        <SimpleChat />
+      </div>
     </MotionConfig>
   );
 }
