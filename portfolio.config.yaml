@@ -14,7 +14,7 @@
 # ╚══════════════════════════════════════════════════════════════════════╝
 siteMode: "portfolio"   # ← CHANGE THIS to "portfolio"
 siteUrl:  "https://alihichem.github.io"  # ← Your GitHub Pages URL (used for RSS & canonical links)
-showPoweredBy: true  # Set to true to show a small "Made with GitVitae" badge in your footer (helps others discover GitVitae)
+showPoweredBy: false  # Set to true to show a small "Made with GitVitae" badge in your footer (helps others discover GitVitae)
 
 # ── Identity ───────────────────────────────────────────── (required) ──
 name: "Hichem Ali"              # Your name — shown in the header and used as a fallback in the avatar
