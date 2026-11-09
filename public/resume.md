@@ -1,7 +1,7 @@
 # Hichem Ali
 **Senior Backend & Web3 Engineer**
 
-Tunisia · +21698944391 · ali.hichem@mail.com · [Github](https://github.com/alihichem) · [Linkedin](https://www.linkedin.com/in/alihichem/)
+Tunisia · +21698944391 · hichem.ali.tn@mail.com · [Github](https://github.com/alihichem) · [Linkedin](https://www.linkedin.com/in/alihichem/)
 
 > **Open to new opportunities**
 

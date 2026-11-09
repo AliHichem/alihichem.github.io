@@ -20,7 +20,7 @@ showPoweredBy: false  # Set to true to show a small "Made with GitVitae" badge i
 name: "Hichem Ali"              # Your name — shown in the header and used as a fallback in the avatar
 title: "Senior Backend & Web3 Engineer"
 tagline: "15+ years architecting serverless cloud platforms, distributed backends, and EVM smart contract systems."
-email: "ali.hichem@mail.com"
+email: "hichem.ali.tn@gmail.com"
 phone: "+21698944391"                    # Optional — e.g. "+1 (555) 000-1234". Shown in contact section and resume.
 location: "Tunisia"
 avatarUrl: "https://github.com/AliHichem.png"  # Demo avatar — replace with your own photo URL (see instructions below)
@@ -60,7 +60,7 @@ resumeTheme:
   twoColumn: "amber"    # Accent color for the two-column resume layout
   classic: "emerald"     # Accent color for the classic resume layout
 
-contactFormEndpoint: "ali.hichem@mail.com"  # Optional — paste a Formspree URL (https://formspree.io/f/xxxx)
+contactFormEndpoint: "hichem.ali.tn@gmail.com"  # Optional — paste a Formspree URL (https://formspree.io/f/xxxx)
                            # or any POST endpoint that accepts {name, email, message}.
                            # Leave empty to use a pre-filled mailto: link instead.
 
